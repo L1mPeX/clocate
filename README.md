@@ -1,4 +1,4 @@
-# Locate Tool
+# Clocate
 
 A simple C program to search for files or directories by name within a specified directory. It supports recursive and non-recursive searches and provides several functional flags for enhanced usability.
 
@@ -14,7 +14,7 @@ A simple C program to search for files or directories by name within a specified
 ## Usage
 
 ```bash
-locate [OPTIONS] <directory> <filename>
+clocate [OPTIONS] <directory> <filename>
 ```
 
 ### Options
@@ -28,25 +28,25 @@ locate [OPTIONS] <directory> <filename>
 
 1. **Recursive search for a file:**
    ```bash
-   ./locate -r /home/user documents
+   ./clocate -r /home/user documents
    ```
    Search recursively in `/home/user` for files or directories named `documents`.
 
 2. **Non-recursive search:**
    ```bash
-   ./locate -n /home/user documents
+   ./clocate -n /home/user documents
    ```
    Search only in `/home/user` without descending into subdirectories.
 
 3. **Count matches:**
    ```bash
-   ./locate -c /home/user documents
+   ./clocate -c /home/user documents
    ```
    Display the total number of matches found.
 
 4. **Help menu:**
    ```bash
-   ./locate -h
+   ./clocate -h
    ```
    Display help information.
 
@@ -57,10 +57,10 @@ locate [OPTIONS] <directory> <filename>
 To compile the program, use the `gcc` compiler:
 
 ```bash
-gcc locate.c -o locate
+gcc clocate.c -o clocate
 ```
 
-This command generates an executable named `locate` in the current directory.
+This command generates an executable named `clocate` in the current directory.
 
 ---
 
@@ -76,14 +76,14 @@ This command generates an executable named `locate` in the current directory.
    If insufficient or incorrect arguments are provided, the program will display an error and the help menu:
    ```bash
    Error: Missing required arguments.
-   Usage: locate [OPTIONS] <directory> <filename>
+   Usage: clocate [OPTIONS] <directory> <filename>
    ```
 
 3. **Unknown flags:**
    If an unsupported flag is used, the program will display an error message and exit:
    ```bash
    Unknown option: -x
-   Usage: locate [OPTIONS] <directory> <filename>
+   Usage: clocate [OPTIONS] <directory> <filename>
    ```
 
 ---
